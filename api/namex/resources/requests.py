@@ -702,9 +702,18 @@ class Request(Resource):
                         # check if any of the Oracle db fields have changed, so we can send them back
                         # - this is only for editing a name from the Edit NR section, NOT making a decision
                         if nrd_name.name != orig_name['name']:
-                            if nrd_name.choice == 1: is_changed__name1 = True
-                            if nrd_name.choice == 2: is_changed__name2 = True
-                            if nrd_name.choice == 3: is_changed__name3 = True
+                            if nrd_name.choice == 1:
+                                is_changed__name1 = True
+                                json_input['comments']['comment'] = 'Name choice 1 changed from {0} to {1}'\
+                                                                    .format(orig_name['name'], nrd_name.name)
+                            if nrd_name.choice == 2:
+                                is_changed__name2 = True
+                                json_input['comments']['comment'] = 'Name choice 2 changed from {0} to {1}' \
+                                                                    .format(orig_name['name'], nrd_name.name)
+                            if nrd_name.choice == 3:
+                                is_changed__name3 = True
+                                json_input['comments']['comment'] = 'Name choice 3 changed from {0} to {1}' \
+                                                                    .format(orig_name['name'], nrd_name.name)
 
             ### END names ###
 
