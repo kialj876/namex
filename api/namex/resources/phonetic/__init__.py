@@ -1,6 +1,6 @@
 import pronouncing
 
-def match_consons(c1, c2):
+def match_consonate(c1, c2):
     if set(['C', 'G']) == set([c1, c2]):
         return True
     if set(['C', 'K']) == set([c1, c2]):
@@ -66,6 +66,66 @@ def first_consonants(word):
             first_consonant_found = True
 
     return value
+
+
+def designations():
+    return [
+        'AN',
+        'AND',
+        'ARE',
+        'AS',
+        'AT',
+        'BE',
+        'BUT',
+        'BY',
+        'FOR',
+        'IF',
+        'IN',
+        'INTO',
+        'IS',
+        'IT',
+        'NO',
+        'NOT',
+        'O',
+        'ON',
+        'OR',
+        'SUCH',
+        'THAT',
+        'THE',
+        'THEIR',
+        'THEN',
+        'THERE',
+        'THESE',
+        'THEY',
+        'THIS',
+        'TO',
+        'ASSOCIATION',
+        'ASSOC',
+        'ASSOC.',
+        'ASSN',
+        'ASSN.',
+        'COMPANY',
+        'CO',
+        'CO.',
+        'CORPORATION',
+        'CORP',
+        'CORP.',
+        'INCORPORATED',
+        'INC',
+        'INC.',
+        'INCORPOREE',
+        'LIABILITY',
+        'LIMITED',
+        'LTD',
+        'LTD.',
+        'LIMITEE',
+        'LTEE',
+        'LTEE.',
+        'SOCIETY',
+        'SOC',
+        'SOC.'
+    ]
+
 
 def first_arpabet(word):
     arpabet = pronouncing.phones_for_word(word)
